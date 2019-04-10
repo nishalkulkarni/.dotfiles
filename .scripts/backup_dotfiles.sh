@@ -18,5 +18,4 @@ rsync -vahP --delete ~/.profile ~/Documents/dotfiles/
 rsync -vahP --delete ~/.xinitrc ~/Documents/dotfiles/
 rsync -vahP --delete ~/.Xclients ~/Documents/dotfiles/
 
-
 echo "Finished copying."
