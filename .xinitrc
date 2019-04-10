@@ -67,6 +67,3 @@ exec $(get_session)
 
 #pywal
 wal -R
-
-xset +fp /home/nishal/.fonts
-xset fp rehash
