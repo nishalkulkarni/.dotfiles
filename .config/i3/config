@@ -176,7 +176,7 @@ smart_borders on
 exec_always --no-startup-id "killall -q compton; compton --config ~/.config/compton.conf"
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Pictures/minimal-space.jpg
+exec_always --no-startup-id feh --bg-fill --randomize ~/Pictures/Wallpapers/*
 
 # Set primary gruvbox colorscheme colors
 set $bg #282828
