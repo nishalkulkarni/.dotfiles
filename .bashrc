@@ -153,8 +153,13 @@ export PATH="/home/nishal/.gem/ruby/2.6.0/bin:$PATH"
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Dat
+export PATH="$PATH:/home/nishal/.dat/releases/dat-13.12.2-linux-x64"
+
 #pywal colorscheme
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
 (cat ~/.cache/wal/sequences &)
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

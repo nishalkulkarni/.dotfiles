@@ -178,6 +178,9 @@ exec_always --no-startup-id "killall -q compton; compton --config ~/.config/comp
 # Wallpaper
 exec_always --no-startup-id feh --bg-fill --randomize ~/Pictures/Wallpapers/*
 
+# Polkit auth agent'
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
+
 # Set primary gruvbox colorscheme colors
 set $bg #282828
 set $fg #d5c4a1
