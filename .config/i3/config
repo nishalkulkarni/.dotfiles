@@ -1,7 +1,7 @@
-# i3 config file (v4)
+# i3 config file
 set $mod Mod4
 
-font pango:Noto Sans 8
+font pango:Noto Sans 10
 
 floating_modifier $mod
 
@@ -14,7 +14,7 @@ default_border pixel 2
 default_floating_border pixel 2
 
 # Terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite 
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -136,7 +136,7 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar
   bar {
-          status_command i3blocks
+          status_command i3status
           colors{
                 background #282828
                 statusline #ebdbb2
@@ -151,7 +151,7 @@ bindsym $mod+r mode "resize"
  }
 
 # Hide/unhide bar
- bindsym $mod+b bar mode toggle
+bindsym $mod+b bar mode toggle
 
 # Screenshot
 bindsym --release Print exec scrot '%Y-%m-%d-%H-%M-%S_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots'
@@ -173,10 +173,14 @@ smart_gaps on
 smart_borders on
 
 # Compton
-exec_always --no-startup-id "killall -q compton; compton --config ~/.config/compton.conf"
+# exec_always --no-startup-id "killall -q compton; compton --config ~/.config/compton.conf"
+exec_always --no-startup-id "killall -q picom; picom "
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill --randomize ~/Pictures/Wallpapers/*
+exec_always --no-startup-id "feh --bg-fill --randomize ~/Pictures/Wallpapers/*"
+
+# Hybrid Graphics
+exec --no-startup-id "optimus-manager-qt"
 
 # Polkit auth agent'
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
@@ -198,3 +202,7 @@ client.focused          $blue $blue $darkgray $purple $fg
 client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
 client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
 client.urgent $red $red $white $red $red
+
+# Brightness controls
+bindsym XF86MonBrightnessDown exec "brightnessctl s 5%-"
+bindsym XF86MonBrightnessUp exec "brightnessctl s +5%"
