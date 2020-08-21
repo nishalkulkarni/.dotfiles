@@ -13,6 +13,7 @@ rsync -vahP --delete ~/.config/rofi ~/Documents/dotfiles/.config
 rsync -vahP --delete ~/.config/compton.conf ~/Documents/dotfiles/.config
 rsync -vahP --delete ~/.config/xmobar ~/Documents/dotfiles/.config
 rsync -vahP --delete ~/.config/alacritty ~/Documents/dotfiles/.config
+rsync -vahP --delete ~/.config/dunst ~/Documents/dotfiles/.config
 
 # Other folders
 rsync -vahP --delete ~/.xmonad ~/Documents/dotfiles/.xmonad
