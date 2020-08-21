@@ -19,9 +19,18 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
 Plug 'rust-lang/rust.vim'
+Plug 'takac/vim-hardtime'
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+" Enable HardTime
+let g:hardtime_default_on = 1
+let g:list_of_normal_keys = ["h", "j", "k", "l", "-", "+"]
+let g:list_of_visual_keys = ["h", "j", "k", "l", "-", "+"]
+let g:list_of_insert_keys = []
+let g:list_of_disabled_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
 
 " Decoration
 set t_Co=256
@@ -63,9 +72,6 @@ set si
 
 " Set to auto read when a file is changed from the outside
 set autoread
-
-" Fast saving
-nmap <leader>w :w!<cr>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
